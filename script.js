@@ -1,4 +1,10 @@
-fetch('https://register-server-logg.onrender.com/register', { // Adicionado '/register' ao final da URL
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorElement = document.getElementById('error');
+
+    fetch('https://register-server-logg.onrender.com/register', { // Adicionado '/register' ao final da URL
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
