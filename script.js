@@ -13,7 +13,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     })
     .then(response => response.json())
     .then(data => {
-        if (data.message) {
+        if (data.success) {
             errorElement.textContent = 'Registration successful!';
             errorElement.style.color = 'green';
         } else {
