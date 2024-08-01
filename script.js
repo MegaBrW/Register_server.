@@ -4,7 +4,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const password = document.getElementById('password').value;
     const errorElement = document.getElementById('error');
 
-    fetch('YOUR_BACKEND_URL/register', {
+    fetch('https://register-server-logg.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
