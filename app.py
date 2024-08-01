@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://megabrw.github.io"}})
 
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
-GIST_ID = '972e50b39619c7a851a78aea17bdb6bd'
+GIST_ID = os.getenv('GIST_ID')
 
 @app.route('/register', methods=['POST'])
 def register():
