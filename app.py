@@ -4,7 +4,7 @@ import requests
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://megabrw.github.io"}})
 
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 GIST_ID = '972e50b39619c7a851a78aea17bdb6bd'
